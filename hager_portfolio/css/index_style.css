@@ -1,0 +1,170 @@
+/*main color= #DA3636*/
+body{font-family: 'Josefin Sans', sans-serif;
+overflow-x: hidden;}
+html{scroll-behavior: smooth;}
+.nicescroll-cursors{background-color: #DA3636 !important;
+border:0 !important}
+nav{background-image: linear-gradient(60deg,#DA3636,#fff);
+padding:10px;
+width:30%;
+border-radius: 10rem;
+position: absolute;
+top:5%;
+left:5%;
+z-index: 2;}
+nav ul{align-items: center;
+justify-content: space-around;}
+nav i{color:#fff;
+transition: all .5s ease-in-out;}
+nav i:hover{color:#DA3636}
+header{background-image: url(../images/head.jpg);
+background-size: cover;
+display: flex;
+align-items: center;
+justify-content: center;    
+height:95vh;
+position: relative;}
+header::after{content:"";
+display: block;
+position: absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-color:rgba(0, 0, 0,.7)}
+nav .fas{position: relative;
+top:8px}
+.heading{color:#DA3636;
+position: relative;
+z-index: 1;
+text-transform: capitalize;}
+.heading span{font-size: 2rem;
+color:#fff}
+h1{font-size: 3.5rem;}
+#typed{font-size: large;
+font-weight: bold;}
+header .btn{padding:15px 30px;
+border: 2px solid #fff !important;
+border-radius: 0;
+transition: all .5s ease-in-out;}
+header .btn:hover{border: 2px solid #DA3636 !important;}
+header button a{color:#fff}
+header button a:hover{text-decoration: none;
+color:#fff;}
+.btn.focus, .btn:focus{box-shadow: none !important;}
+/*about*/
+.about{padding: 7rem 0;}
+.about img{width:200px;
+height:200px;}
+.about .right{display: flex;
+align-items: center;}
+.about p>span{color:transparent;
+font-size: larger;
+font-weight: bold;
+background-image: linear-gradient(to right,#DA3636,#fff);
+-webkit-background-clip: text;
+-moz-background-clip: text;
+-o-background-clip: text;}
+.skitter .info_slide_dots{display: none !important;}
+.skitter{border: 3px solid #DA3636;}
+.progress{margin-bottom: 30px;
+height:5px;
+background-color: #DA3636;}
+.portfolio{padding:7rem 0;
+background-color: #EBEBEB;
+overflow-x: hidden;}
+.port-head h5{color: #DA3636;}
+.portfolio .img-fluid{height:250px}
+.portfolio img{cursor: pointer;}
+.modal-header,.modal-footer{padding: 0;
+border:0}
+.modal-footer{align-items: center;
+justify-content: center;}
+.modal-footer a{color: #DA3636;}
+.modal-footer a:hover{text-decoration: none;}
+.show{display: flex !important;
+align-items: center;}
+.img{position: relative;}
+.img .overlay{
+position: absolute;
+top:0;
+left:0;
+width:0%;
+opacity: 0;
+height:100%;
+display: flex;
+align-items: center;
+justify-content: center;
+color:#DA3636;
+z-index: 9;
+background-color:rgba(0,0,0,.9);
+cursor: pointer;
+transition: all 1.5s ease-in-out;}
+.img:hover .overlay{width:100%;
+opacity: 1;}
+.divider{width:200px;
+height:3px;
+background-color: #DA3636;}
+.projects{padding:7rem 0;
+background-color: #262626}
+.projects .img-fluid{height:300px;
+width:100%}
+.projects h3{color:#DA3636;}
+.projects img{border:2px solid #DA3636;
+    transition: all .5s ease-in-out;}
+.projects .img:hover img{transform: scale(1.3);}
+.projects .img{overflow: hidden;}
+.say{padding:7rem 0;}
+.say .part{background-color: #F7F7F7;
+width:250px;
+height:250px;
+transform: rotate(45deg);
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;}
+.say .part .content{transform: rotate(-45deg);
+font-size: 2rem;}
+.say i,.say .part{transition: all .5s ease-in-out;
+cursor: pointer;}
+.say .part:hover i{color: #DA3636;}
+.say .part:hover{border-top: 5px solid #DA3636;
+background-color: #fff;}
+.say .part:hover{border-bottom:5px solid #DA3636;}
+.welcome{padding:5rem 0;
+background-color: #262626;
+color: #fff;
+position: relative;
+border-bottom: 2px solid #DA3636;}
+.welcome .left{border-right: 1px solid #DA3636;}
+.welcome::after{content: "";
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #DA3636;
+   position: absolute;
+   bottom: -20px;
+   left:48%;}
+.welcome i,b,.fa-phone-volume{color: #DA3636;}   
+.contact{padding: 5rem 0;}
+footer{background-color:#262626 ;
+color: #fff;
+font-size: large;}
+footer span{color: #DA3636;}
+.contact{background-color: #EBEBEB;}
+.contact a{color:#DA3636}
+.contact a:hover{text-decoration: none;}
+.up{background-image: linear-gradient(to right,#DA3636,#fff);
+width:50px;
+height:50px;
+border-radius:50%;
+position: fixed;
+display: flex;
+align-items: center;
+justify-content: center;
+right:20px;
+bottom: 20px;
+display: none;
+transition: all .5s ease-in-out;
+cursor: pointer;}
