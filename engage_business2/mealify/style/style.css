@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --light-color: #EEEEEE;
+    --black-color:#37373f;
+    --text-color:#4f4f5a;
+    --red-color:#ce1212;
+    --bg-dark:#252525;
+    --yellow:#c17e1f;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Amatic SC', cursive;
+    color: var(--black-color);
+}
+
+
+.header{
+    height: 100vh;
+    background-color: var(--light-color);
+    color: var(--text-color);
+}
+
+
+
+.header .container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-caption,.header-img{
+    width: 40%;
+}
+
+.header-img img{
+    width: 100%;
+}
+
+h1{
+    font-size: 65px;
+    font-weight: 700;
+}
+
+.header-caption p{
+    margin: 20px 0px;
+}
+
+.header-caption button{
+    padding: 10px 7px;
+    border-radius: 0px 10px 10px 10px;
+    border: none;
+    background-color: var(--red-color);
+    color: #fff;
+}
+
+.video-paly{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top:50%;
+    left:10px;
+    transform: translateY(-50%);
+    
+}
+ .video-paly-red{
+    width: 70px;
+    height: 70px; 
+    border-radius: 50%;
+    background:linear-gradient( to right,var(--red-color) 50%,transparent 50%);
+ }
+
+ .header-box{
+    display: flex; 
+    gap: 20px;
+    align-items: center;
+ }
+
+ .video-box{
+    position: relative;
+ }
+
+.header img{
+   filter: drop-shadow(10px 10px 10px gray);
+   position: relative;
+}
+
+@keyframes shake {
+    0%{left: 0;top:0}
+    25%{left: 5px;top:0}
+    50%{left: -5;top:3px}
+    70%{left: 0;top:0}
+    100%{left:-3px;top:2px}
+}
+
+.header img:hover{
+    animation: shake .5s infinite alternate;
+}
+
+/* navbar */
+.navbar{
+    position: fixed;
+    top:0;
+    right: 0;
+    left:0;
+    z-index: 9999;
+    background-color: #fff;
+    box-shadow: 0px 0px 14px 0px #0000001b;
+}
+.navbar .container{
+   
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.navbar h2::after{
+    content: '.';
+    color: var(--red-color);
+}
+
+.navbar img{width: 70px;}
+
+.links ul{
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: var(--text-color);
+    position: relative;
+}
+
+.navbar li{
+    padding: 0px 20px;  
+}
+
+.navbar a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: var(--red-color);
+    position: absolute;
+    bottom:-10px;
+    left:0;
+    transition: width .5s;
+}
+
+.navbar a.active::after{
+    width: 100%;
+}
+
+.navbar a:hover::after{
+    width: 100%;
+}
+
+.light,input[type="checkbox"]{
+    display: none;
+}
+
+:root:has(#mode:checked) .light{
+    display: block;
+}
+:root:has(#mode:checked) .header{
+   background-color: var(--black-color);
+}
+:root:has(#mode:checked) .video-paly-red{
+    background:linear-gradient( to right,var(--yellow) 50%,transparent 50%);
+}
+:root:has(#mode:checked) .dark{
+    display: none;
+}
+
+
+.right-nav{
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    display: none;
+}
+
+
+.aside{
+display: none;
+width: 30%;
+position: absolute;
+top:0;
+right:-30%;
+bottom: 0;
+background-color: #FFFFFF;
+z-index: 99999999;
+transition: right .5s ;
+}
+
+
+
+:root:has(#menu:checked) .aside{
+    right:0
+}
+
+.gallery .container{
+ column-count: 3;   
+}
+
+.gallery{
+    padding: 50px 0px;
+}
+.gallery .container img{
+    width: 100%;
+}
+
+.gallery-item {
+    padding: 5px;
+}
+
+.chefs{
+    padding: 50px 0px;
+}
+
+.chef-item{
+    width: 30.333%;
+}
+
+.chefs .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.chef-item img{
+    width: 100%;
+}
+
+.chef-item{
+  box-shadow: 0px 0px 3px #ccc;
+  
+}
+
+.card-img{
+    position: relative;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+:root:has(#header:target) a[href="#header"]::after{
+    width: 100%;
+}
+:root:has(#chefs:target) a[href="#chefs"]::after{
+    width: 100%;
+}
+:root:has(#gallery:target) a[href="#gallery"]::after{
+    width: 100%;
+}
