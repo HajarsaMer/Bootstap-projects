@@ -1,0 +1,136 @@
+body{
+    font-family: 'Outfit', sans-serif;
+}
+
+h2{
+    font-weight: 700;
+   font-size: 48px;
+    
+}
+
+header{
+    background-image: url(../images/intro-header.jpg);
+    background-position: top;
+    background-size: cover;
+   
+}
+
+.header-caption{
+    height: 70vh;
+}
+
+header p.header-title{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+#number{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#number button{
+    background-color: #FFB91F;
+    padding: 15px 15px;
+    font-weight: 900;
+}
+
+.homes img{
+    position: relative;
+    bottom: 0;
+    transition: bottom .5s;
+}
+
+.homes img:hover{
+    bottom: 5px;
+    cursor: pointer;
+}
+
+
+
+.home-item,.layout-item{
+    position: relative;
+}
+
+.home-item,.layout-item::after{
+    content: '';
+    width: 15%;
+    margin: auto;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    bottom:-5px;
+    left:50%;
+    opacity: 0;
+    transform: translate(-50%);
+    transition: opacity .5s,bottom .5s;
+}
+
+.home-item:hover::after,.layout-item:hover::after{
+bottom: 0;
+opacity: 1;
+}
+
+
+
+/* frontend */
+
+.frontend{
+    background-image: url(../images/intro-bg-2.jpg);
+    background-size: cover;
+}
+
+
+/* layout */
+
+.layout-item a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* speed */
+
+.speed{
+    background-image: url(../images/intro-bg-3.jpg);
+    background-size: cover;
+}
+
+
+.custom-nav{
+    border-bottom: 5px solid pink;
+    padding: 15px;
+    transition: all .5s ease-in;
+    background-color: #ccc;
+}
+
+
+#toUp{
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    background-color: #FFB91F;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+aside{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left:0;  
+    z-index: 99999;
+}
+
+.color-box{
+    padding: 20px;
+    background-color: #ccc;
+}
+span{
+    display: inline-block;
+    padding: 20px;
+}
